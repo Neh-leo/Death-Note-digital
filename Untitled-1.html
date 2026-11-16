@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death Note Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #08080a;
+      background-image: radial-gradient(circle at center, #18181f 0%, #050507 100%);
+      color: #f4f4f6;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .menu-container {
+      background-color: #101014;
+      border: 2px solid #2a2a32;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(139, 0, 0, 0.25);
+      padding: 3rem 2.5rem;
+      border-radius: 6px;
+      text-align: center;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      height: 2px;
+      width: 70px;
+      background-color: #8b0000;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .menu-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background-color: #16161c;
+      color: #e2e2e8;
+      border: 1px solid #383842;
+      border-radius: 4px;
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .menu-btn:hover {
+      background-color: #8b0000;
+      border-color: #ff1e1e;
+      color: #ffffff;
+      box-shadow: 0 0 18px rgba(220, 20, 60, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .menu-btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 0 8px rgba(220, 20, 60, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="menu-container">
+    <h1>Death Note Digital</h1>
+    <div class="divider"></div>
+
+    <nav class="options">
+      <button type="button" class="menu-btn" onclick="seleccionarOpcion('Usar Death Note')">
+        Usar Death Note
+      </button>
+
+      <button type="button" class="menu-btn" onclick="seleccionarOpcion('Juegos mortales')">
+        Juegos mortales
+      </button>
+    </nav>
+  </main>
+
+  <script>
+    function seleccionarOpcion(opcion) {
+      // Aquí puedes reemplazar la alerta por la redirección a otra página:
+      // ejemplo: window.location.href = "death-note.html";
+      alert("Has seleccionado: " + opcion);
+    }
+  </script>
+
+</body>
+</html>
