@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#08080a">
+  <meta name="description" content="Death Note digital: una libreta ficticia inspirada en el manga.">
+  <title>Death Note Digital</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #08080a;
+      --bg-radial: #18181f;
+      --surface: #101014;
+      --surface-2: #16161c;
+      --border: #2a2a32;
+      --border-2: #383842;
+      --text: #f4f4f6;
+      --red: #8b0000;
+      --red-bright: #ff1e1e;
+      --red-glow: rgba(220, 20, 60, 0.5);
+      --font-title: 'Cinzel', Georgia, serif;
+      --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --radius: 4px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { height: 100%; }
+
+    body {
+      min-height: 100%;
+      background-color: var(--bg);
+      background-image: radial-gradient(circle at center, var(--bg-radial) 0%, #050507 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      display: grid;
+      place-items: center;
+      padding: max(1rem, env(safe-area-inset-top)) 1rem max(1rem, env(safe-area-inset-bottom));
+    }
+
+    .menu-container {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .9), 0 0 25px rgba(139, 0, 0, .25);
+      border-radius: 6px;
+      width: 100%;
+      max-width: 440px;
+      padding: clamp(1.75rem, 6vw, 3rem) clamp(1.25rem, 5vw, 2.5rem);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: clamp(1.6rem, 7vw, 2.3rem);
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      text-shadow: 0 0 12px rgba(255, 255, 255, .35);
+      text-wrap: balance;
+      margin-bottom: .5rem;
+    }
+
+    .divider {
+      height: 2px;
+      width: 70px;
+      background: var(--red);
+      margin: 0 auto 2.5rem;
+    }
+
+    .options { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .menu-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: var(--surface-2);
+      color: #e2e2e8;
+      border: 1px solid var(--border-2);
+      border-radius: var(--radius);
+      font: 600 1.15rem/1.2 var(--font-title);
+      letter-spacing: .1em;
+      cursor: pointer;
+      transition: background-color .25s, border-color .25s, box-shadow .25s, transform .25s;
+    }
+
+    .menu-btn:hover {
+      background: var(--red);
+      border-color: var(--red-bright);
+      color: #fff;
+      box-shadow: 0 0 18px var(--red-glow);
+      transform: translateY(-2px);
+    }
+
+    .menu-btn:active { transform: translateY(1px); box-shadow: 0 0 8px var(--red-glow); }
+
+    .menu-btn:focus-visible { outline: 2px solid var(--red-bright); outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="menu-container">
+    <h1>Death Note Digital</h1>
+    <div class="divider" role="presentation"></div>
+
+    <nav class="options" aria-label="Menú principal">
+      <button type="button" class="menu-btn">Usar Death Note</button>
+      <button type="button" class="menu-btn">Juegos mortales</button>
+    </nav>
+  </main>
+
+</body>
+</html>
